@@ -1,5 +1,5 @@
 package edu.ant.patterns.design.factory;
 
-public class Sentry extends Bee{
+public class Sentinel extends Bee{
 
 }
