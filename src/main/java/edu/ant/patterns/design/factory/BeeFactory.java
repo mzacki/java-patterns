@@ -14,8 +14,8 @@ public class BeeFactory {
                 return new Cleaner();
             case NURSE:
                 return new Nurse();
-            case SENTRY:
-                return new Sentry();
+            case SENTINEL:
+                return new Sentinel();
             case SOLDIER:
                 return new Soldier();
             case WORKER:

@@ -4,7 +4,7 @@ public enum BeeRole {
 
     CLEANER,
     NURSE,
-    SENTRY,
+    SENTINEL,
     SOLDIER,
     HUNTER,
     WORKER,
