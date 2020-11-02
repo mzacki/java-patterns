@@ -1,23 +1,27 @@
 package edu.ant.patterns.visitor;
 
+import edu.ant.solutions.logger.LoggingService;
+
 public class Main {
 
     public static void main(String[] args) {
+
         AngrySwarm angrySwarm = new AngrySwarm();
         CalmBeehive calmBeehive = new CalmBeehive();
 
         Beekeeper beekeeper = new Beekeeper();
-        System.out.println("Beekeeper to visit angry swarm:");
+        LoggingService.logMessage("Beekeeper to visit angry swarm:");
         angrySwarm.accept(beekeeper);
-        System.out.println("Beekeeper to visit calm beehive:");
+        LoggingService.logMessage("Beekeeper to visit calm beehive:");
         calmBeehive.accept(beekeeper);
 
-        System.out.println("---------------------");
+        LoggingService.logMessage("---------------------");
         Amateur amateur = new Amateur();
-        System.out.println("Amateur approached by angry swarm:");
+        LoggingService.logMessage("Amateur approached by angry swarm:");
         angrySwarm.accept(amateur);
-        System.out.println("Amateur looking at calm bees:");
+        LoggingService.logMessage("Amateur looking at calm bees:");
         calmBeehive.accept(amateur);
 
     }
+
 }
