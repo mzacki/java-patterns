@@ -1,7 +1,7 @@
 package edu.ant.patterns.singleton;
 
 /**Singleton implemented as enum. Simple and acceptable solution.
- * Best way according to Effective Java (Bloch
+ * Best way according to Effective Java (Bloch)
 * IN PLUS:
 *  + consistent
  *  + serializable

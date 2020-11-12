@@ -8,6 +8,8 @@ public class LoggingService {
 
     private static final Logger LOG = LoggerFactory.getLogger(LoggingService.class);
 
+    private LoggingService() {}
+
     public static void logMessage(Object... args) {
         LOG.info("Logging service msg: {}", args);
     }
