@@ -1,9 +1,16 @@
 package edu.ant.patterns.singleton;
 
 /**
- * Singleton is considered as anti-pattern by some sources.
- * Multiple implementations are possible. See java:S2168 Sonar complaint.
- *
+ * Singleton is considered to be anti-pattern.
+ * Double-checked implementation in particular.
+ * Other solutions are possible
+ * See java:S2168 Sonar complaint.
+ * Weaknesses of anti-pattern:
+ * - difficult testing if singleton is stateful
+ * - more tight coupling
+ * - single responsibility principle is broken
+ * - open / close principle is broken (unless factory method implemented)
+ * - it's a kind of object-related public static variable (which is very bad)
  */
 
 // NotThreadSafe
