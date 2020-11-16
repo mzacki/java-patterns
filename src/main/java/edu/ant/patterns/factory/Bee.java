@@ -1,4 +1,5 @@
 package edu.ant.patterns.factory;
 
-public class Ostrowska {
+public abstract class Bee {
+
 }
