@@ -1,6 +1,6 @@
 package edu.ant.patterns.visitor;
 
-import edu.ant.solutions.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 public class Amateur implements Visitor {
 

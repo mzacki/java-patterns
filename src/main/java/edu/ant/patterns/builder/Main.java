@@ -1,6 +1,6 @@
 package edu.ant.patterns.builder;
 
-import edu.ant.solutions.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.util.Collections;
 
 public class Main {
