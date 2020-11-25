@@ -1,7 +1,7 @@
 package edu.ant.patterns.basic.oop.anthill;
 
 /**
- * Abstraction: parent classes gather more general features (states)
+ * Abstraction: parent classes cut more general features (states)
  * and behaviour. The perfect example of abstraction are parents
  * that are abstract classes or interfaces.
  *
