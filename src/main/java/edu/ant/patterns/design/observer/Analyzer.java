@@ -4,7 +4,7 @@ import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Analyzer implements Listener {
 
-    private String id;
+    private final String id;
 
     public Analyzer(String id) {
         this.id = id;
