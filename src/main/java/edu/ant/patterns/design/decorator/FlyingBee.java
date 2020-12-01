@@ -26,4 +26,5 @@ public class FlyingBee implements Bee {
     public void fly() {
         LoggingService.logMessage("I can fly!");
     }
+
 }
