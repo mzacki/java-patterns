@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.observer;
 
-import edu.ant.patterns.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 /**
  * Any device listening to the monitor - able to receive messages.

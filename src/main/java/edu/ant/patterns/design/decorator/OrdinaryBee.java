@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.decorator;
 
-import edu.ant.patterns.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 public class OrdinaryBee implements Bee {
 

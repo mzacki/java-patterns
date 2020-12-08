@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.composite;
 
-import edu.ant.patterns.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.util.List;
 
 public class Branch implements BranchPart {

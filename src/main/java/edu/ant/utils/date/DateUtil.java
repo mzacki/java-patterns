@@ -1,4 +1,4 @@
-package edu.ant.patterns.utils.date;
+package edu.ant.utils.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
