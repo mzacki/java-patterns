@@ -1,4 +1,4 @@
-package edu.ant.patterns.basic.abstract_class;
+package edu.ant.patterns.basic.abstracts;
 
 
 public class Hymenoptera extends Insect {
