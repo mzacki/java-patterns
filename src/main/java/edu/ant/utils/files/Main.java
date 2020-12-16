@@ -1,5 +1,6 @@
 package edu.ant.utils.files;
 
+import edu.ant.utils.logger.LoggingService;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -16,6 +17,14 @@ public class Main {
 
         FileWriter.write(FileReader.list(INPUT), OUTPUT);
         FileWriter.add(Arrays.asList(" ", "Zbigniew Herbert"), OUTPUT);
+
+        // in classpath
+        FileHelper.create("new.txt");
+
+        LoggingService.logMessage(FileHelper.isFile("src/main/resources"));
+        LoggingService.logMessage(FileHelper.isFile(INPUT));
+        LoggingService.logMessage(FileHelper.isDir(INPUT));
+        LoggingService.logMessage(FileHelper.isDir("src/main/resources"));
     }
 
 }
