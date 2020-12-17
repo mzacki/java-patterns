@@ -16,8 +16,8 @@ public class DBConnection {
 
         try {
             String url = "jdbc:mysql://localhost/testbase?verifyServerCertificate=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String user = "root";
-            String password = "root";
+            String user = "";
+            String password = "";
             Connection connection = DriverManager.getConnection(url, user, password);
 
             Statement st = connection.createStatement();
