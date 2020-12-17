@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.chainofresponsibility;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Application extends AlertChain {
 

@@ -1,6 +1,6 @@
 package edu.ant.patterns.basic.interfaces;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 /**
  * Interface does not have a constructor.

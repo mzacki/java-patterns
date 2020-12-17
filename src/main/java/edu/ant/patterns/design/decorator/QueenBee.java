@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.decorator;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 // another decorator class
 // adds new option for some selected bees

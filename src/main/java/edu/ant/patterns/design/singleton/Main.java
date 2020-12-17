@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.singleton;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Main {
 

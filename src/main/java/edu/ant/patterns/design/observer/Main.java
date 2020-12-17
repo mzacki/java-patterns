@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.observer;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Main {
     public static void main(String[] args) {

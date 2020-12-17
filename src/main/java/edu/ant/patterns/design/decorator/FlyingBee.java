@@ -1,6 +1,6 @@
 package edu.ant.patterns.design.decorator;
 
-import edu.ant.utils.logger.LoggingService;
+import edu.ant.patterns.utils.logger.LoggingService;
 
 // Decorator class that improve behaviour of OrdinaryBee class
 // by adding new method fly()
