@@ -17,4 +17,14 @@ public class ReflectionUtils {
         }
     }
 
+    static <T> void setDeclaredField(Object o, Class<T> klazz, String fieldName, Object value)
+            throws NoSuchFieldException, IllegalAccessException {
+
+            Field field = klazz.getDeclaredField(fieldName);
+            field.setAccessible(true);
+            field.set(o, value);
+            LoggingService.logTwoArgs(field.getName(), field.get(o));
+    }
+
+
 }
