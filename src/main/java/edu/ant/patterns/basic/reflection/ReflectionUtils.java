@@ -1,10 +1,12 @@
 package edu.ant.patterns.basic.reflection;
 
 import edu.ant.patterns.utils.logger.LoggingService;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -49,6 +51,19 @@ public class ReflectionUtils {
                 e.printStackTrace();
             }
         });
+    }
+
+    static <T> T getInstance(Class<T> klazz, int paramCount, Object... args)
+            throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+
+        Class<?>[] params = Arrays.stream(klazz.getConstructors())
+                .filter(c ->c.getParameterCount() == paramCount)
+                .map(Constructor::getParameterTypes)
+                .findFirst().orElseThrow();
+
+        Constructor<T> constructor = klazz.getConstructor(params);
+
+        return constructor.newInstance(args);
     }
 
 

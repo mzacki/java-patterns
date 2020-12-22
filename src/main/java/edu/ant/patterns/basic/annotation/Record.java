@@ -7,6 +7,11 @@ public class Record {
     @Member
     private String input;
 
+    public Record(long id) {
+        this.id = id;
+        this.input = "empty input";
+    }
+
     public Record(@Param("id") long id, @Param("txt") String input) {
         this.id = id;
         this.input = input;
