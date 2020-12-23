@@ -30,6 +30,8 @@ public class Main {
         constructStep();
         // FIELD STEP
         fieldStep();
+        // METOD STEP
+        methodStep();
     }
 
     private static void constructStep() throws NoSuchConstructorException {
@@ -38,7 +40,7 @@ public class Main {
         LoggingService.logMessage(constructorStep.make());
     }
 
-    private static void fieldStep() throws NoSuchFieldException, IllegalAccessException {
+    private static void fieldStep() throws NoSuchFieldException {
         Record record = new Record(0L, "initial input");
         LoggingService.logMessage(record);
         FieldStep<Record> fieldStep = new FieldStep<>(Record.class, "input", "input update");
@@ -46,5 +48,13 @@ public class Main {
         LoggingService.logMessage(record);
     }
 
+    private static void methodStep() throws NoSuchMethodException {
+        Record record = new Record(0L, "initial input");
+        LoggingService.logMessage(record);
+        MethodStep<Record> methodStep = new MethodStep<>(Record.class, "setInput", new Class[]{String.class},
+                new Object[]{"input injected by method step"});
+        methodStep.make(record);
+        LoggingService.logMessage(record);
+    }
 
 }
