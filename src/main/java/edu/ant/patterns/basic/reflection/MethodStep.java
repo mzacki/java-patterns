@@ -7,17 +7,17 @@ import java.lang.reflect.Method;
 public class MethodStep<T> extends Step<T> {
 
     private final String methodName;
-    private final Class[] paramTypes;
+    private final Class<T>[] paramTypes;
     private final Object[] paramValues;
 
-    public MethodStep(Class<T> klazz, String methodName, Class<T>[] paramTypes, Object[] paramValues) {
+    MethodStep(Class<T> klazz, String methodName, Class<T>[] paramTypes, Object[] paramValues) {
         super(klazz);
         this.methodName = methodName;
         this.paramTypes = paramTypes;
         this.paramValues = paramValues;
     }
 
-    public Object make(T object) throws NoSuchMethodException {
+    Object make(T object) throws NoSuchMethodException {
         Method method = getKlazz().getMethod(methodName, paramTypes);
         try {
             return method.invoke(object, paramValues);

@@ -10,7 +10,7 @@ public class ConstructorStep<T> extends Step<T> {
     private final Class<T>[] paramTypes;
     private final Object[] paramValues;
 
-    public ConstructorStep(Class<T> klazz, Class<T>[] paramTypes, Object[] paramValues) {
+    ConstructorStep(Class<T> klazz, Class<T>[] paramTypes, Object[] paramValues) {
         super(klazz);
         this.paramTypes = paramTypes;
         this.paramValues = paramValues;

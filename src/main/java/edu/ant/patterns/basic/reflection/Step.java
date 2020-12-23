@@ -12,4 +12,8 @@ public abstract class Step<T> {
         return klazz;
     }
 
+    public String getType() {
+        return klazz.getTypeName();
+    }
+
 }

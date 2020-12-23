@@ -55,6 +55,7 @@ public class Main {
                 new Object[]{"input injected by method step"});
         methodStep.make(record);
         LoggingService.logMessage(record);
+        LoggingService.logMessage(methodStep.getType());
     }
 
 }
