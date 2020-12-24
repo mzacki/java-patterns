@@ -42,6 +42,8 @@ public class Main {
         // GET REFERENCE TYPE OR CONSTRUCTOR FOR REF TYPE
         LoggingService.logMessage(ReflectionUtils.getWrapper(long.class));
         LoggingService.logMessage(ReflectionUtils.getConstructor(long.class));
+        // GET PARAM VALUE IF PARAM ANNOTATION IS PRESENT
+        LoggingService.logMessage(ReflectionUtils.getParam(Record.class.getConstructors()[0].getParameters()[1]));
     }
 
     private static void constructStep() throws NoSuchConstructorException {

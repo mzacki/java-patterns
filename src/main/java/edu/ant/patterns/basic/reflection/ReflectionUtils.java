@@ -1,5 +1,6 @@
 package edu.ant.patterns.basic.reflection;
 
+import edu.ant.patterns.basic.annotation.Param;
 import edu.ant.patterns.basic.exception.NoSuchConstructorException;
 import edu.ant.patterns.utils.logger.LoggingService;
 import java.lang.reflect.Constructor;
@@ -7,6 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -69,10 +71,13 @@ public class ReflectionUtils {
         return constructor.newInstance(args);
     }
 
+    /**
+     * returns public constructor with the least number of params
+     * if more than one found, returns first
+     * if primitive passed uses wrapper class
+     * */
+
     static <T> T getConstructor(Class<T> klazz) throws NoSuchConstructorException {
-        // returns public constructor with the least number of params
-        // if more than one found, returns first
-        // if primitive passed uses wrapper class
         return (T) Arrays.stream(getWrapper(klazz).getConstructors())
                 .min(Comparator.comparingInt(Constructor::getParameterCount))
                 .orElseThrow(() -> new NoSuchConstructorException("No public constructor available for class " + klazz.getName()));
@@ -95,6 +100,11 @@ public class ReflectionUtils {
         }
 
         return klazz;
+    }
+
+    public static String getParam(Parameter parameter) {
+        Param annotation = parameter.getDeclaredAnnotation(Param.class);
+        return annotation != null ? annotation.value() : parameter.getName();
     }
 
 
