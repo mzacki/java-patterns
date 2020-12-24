@@ -1,5 +1,6 @@
 package edu.ant.patterns.basic.reflection;
 
+import edu.ant.patterns.basic.exception.NoSuchConstructorException;
 import edu.ant.patterns.utils.logger.LoggingService;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -7,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -63,6 +65,13 @@ public class ReflectionUtils {
         Constructor<T> constructor = klazz.getConstructor(params);
 
         return constructor.newInstance(args);
+    }
+
+    static <T> T getConstructor(Class<T> klazz) throws NoSuchConstructorException {
+        // returns public constructor with the least number of params
+        return (T) Arrays.stream(klazz.getConstructors())
+                .min(Comparator.comparingInt(Constructor::getParameterCount))
+                .orElseThrow(() -> new NoSuchConstructorException("No public constructor available for class " + klazz.getName()));
     }
 
 

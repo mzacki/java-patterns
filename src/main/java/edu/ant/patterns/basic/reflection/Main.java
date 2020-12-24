@@ -1,6 +1,7 @@
 package edu.ant.patterns.basic.reflection;
 
 import edu.ant.patterns.basic.annotation.Record;
+import edu.ant.patterns.basic.annotation.Tuple;
 import edu.ant.patterns.basic.exception.NoSuchConstructorException;
 import edu.ant.patterns.utils.logger.LoggingService;
 import java.lang.reflect.InvocationTargetException;
@@ -32,6 +33,14 @@ public class Main {
         fieldStep();
         // METOD STEP
         methodStep();
+        // GET CONSTRUCTOR
+        try {
+            LoggingService.logMessage(ReflectionUtils.getConstructor(Record.class));
+            LoggingService.logMessage(ReflectionUtils.getConstructor(Tuple.class));
+        } catch (NoSuchConstructorException e) {
+            LoggingService.logError(e);
+        }
+
     }
 
     private static void constructStep() throws NoSuchConstructorException {

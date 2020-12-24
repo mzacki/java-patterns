@@ -7,6 +7,8 @@ public class Record {
     @Member
     private String input;
 
+    public Record() {}
+
     public Record(long id) {
         this.id = id;
         this.input = "empty input";

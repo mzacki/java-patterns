@@ -25,4 +25,8 @@ public class LoggingService {
         return LOG;
     }
 
+    public static void logError(Exception e) {
+        LOG.error("{} {}", e.getClass().getName(), e.getMessage());
+    }
+
 }
