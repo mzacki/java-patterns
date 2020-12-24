@@ -9,7 +9,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ReflectionUtils {
@@ -49,7 +51,7 @@ public class ReflectionUtils {
             try {
                 LoggingService.logTwoArgs(m.getName(), m.invoke(o));
             } catch (IllegalAccessException | InvocationTargetException e) {
-                e.printStackTrace();
+                LoggingService.logError(e);
             }
         });
     }
@@ -58,7 +60,7 @@ public class ReflectionUtils {
             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 
         Class<?>[] params = Arrays.stream(klazz.getConstructors())
-                .filter(c ->c.getParameterCount() == paramCount)
+                .filter(c -> c.getParameterCount() == paramCount)
                 .map(Constructor::getParameterTypes)
                 .findFirst().orElseThrow();
 
@@ -69,9 +71,30 @@ public class ReflectionUtils {
 
     static <T> T getConstructor(Class<T> klazz) throws NoSuchConstructorException {
         // returns public constructor with the least number of params
-        return (T) Arrays.stream(klazz.getConstructors())
+        // if more than one found, returns first
+        // if primitive passed uses wrapper class
+        return (T) Arrays.stream(getWrapper(klazz).getConstructors())
                 .min(Comparator.comparingInt(Constructor::getParameterCount))
                 .orElseThrow(() -> new NoSuchConstructorException("No public constructor available for class " + klazz.getName()));
+    }
+
+    static Class getWrapper(Class klazz) {
+
+        if(klazz.isPrimitive()) {
+            Map<Class, Class> map = new HashMap<>();
+            map.put(byte.class, Byte.class);
+            map.put(short.class, Short.class);
+            map.put(int.class, Integer.class);
+            map.put(long.class, Long.class);
+            map.put(float.class, Float.class);
+            map.put(double.class, Double.class);
+            map.put(char.class, Character.class);
+            map.put(boolean.class, Boolean.class);
+
+            return map.get(klazz);
+        }
+
+        return klazz;
     }
 
 

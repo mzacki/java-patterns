@@ -9,9 +9,8 @@ import java.lang.reflect.InvocationTargetException;
 public class Main {
 
     /**
-     * USE OF REFLECTION MECHANISM - EXAMPLES
-     * PLEASE USE IT WITH PRUDENCE, SEE java:S3011
-     * */
+     * USE OF REFLECTION MECHANISM - EXAMPLES PLEASE USE IT WITH PRUDENCE, SEE java:S3011
+     */
 
     public static void main(String[] args)
             throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
@@ -25,8 +24,8 @@ public class Main {
         // INVOKE DECLARED METHODS
         ReflectionUtils.invokeGetters(record, Record.class);
         // INVOKE CONSTUCTOR
-        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 2,1L, "input"));
-        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 1,1L));
+        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 2, 1L, "input"));
+        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 1, 1L));
         // CONSTRUCT STEP
         constructStep();
         // FIELD STEP
@@ -40,11 +39,14 @@ public class Main {
         } catch (NoSuchConstructorException e) {
             LoggingService.logError(e);
         }
-
+        // GET REFERENCE TYPE OR CONSTRUCTOR FOR REF TYPE
+        LoggingService.logMessage(ReflectionUtils.getWrapper(long.class));
+        LoggingService.logMessage(ReflectionUtils.getConstructor(long.class));
     }
 
     private static void constructStep() throws NoSuchConstructorException {
-        ConstructorStep<Record> constructorStep = new ConstructorStep<>(Record.class, new Class[]{long.class, String.class},
+        ConstructorStep<Record> constructorStep = new ConstructorStep<>(Record.class,
+                new Class[]{long.class, String.class},
                 new Object[]{99L, "record constructed by step"});
         LoggingService.logMessage(constructorStep.make());
     }
