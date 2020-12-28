@@ -1,0 +1,3 @@
+1,orange,NW,storm,50
+2,red,SW,strong wind,90
+3,black,S,foehn wind,100
