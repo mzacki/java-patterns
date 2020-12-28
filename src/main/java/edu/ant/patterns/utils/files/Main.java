@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class Main {
 
-    private static final String INPUT = "src/main/resources/input.txt";
-    private static final String OUTPUT = "src/main/resources/output.txt";
+    private static final String INPUT = "src/main/resources/utils/input.txt";
+    private static final String OUTPUT = "src/main/resources/utils/output.txt";
 
     public static void main(String[] args) throws IOException {
 
