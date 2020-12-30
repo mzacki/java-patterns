@@ -9,6 +9,8 @@ public class Alert implements Entity {
     private String type;
     private int probability;
 
+    public Alert() {}
+
     public Alert(long id, String level, String area, String type, int probability) {
         this.id = id;
         this.level = level;
