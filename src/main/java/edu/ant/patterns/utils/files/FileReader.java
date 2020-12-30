@@ -16,7 +16,7 @@ public class FileReader {
     public static void read(String file) throws IOException {
         Path path = Paths.get(file);
         List<String> lines = Files.readAllLines(path);
-        lines.forEach(LoggingService::logMessage);
+        lines.forEach(LoggingService::logMsg);
     }
 
     public static List<String> list(String file) throws IOException {

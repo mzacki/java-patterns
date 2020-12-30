@@ -9,7 +9,7 @@ public class LoggingService {
 
     private LoggingService() {}
 
-    public static void logMessage(Object... args) {
+    public static void logMsg(Object... args) {
         LOG.info("Logging service msg: {}", args);
     }
 

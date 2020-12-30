@@ -23,10 +23,10 @@ public class Main {
             FileHelper.create("new.txt");
         }
 
-        LoggingService.logMessage(FileHelper.isFile("src/main/resources"));
-        LoggingService.logMessage(FileHelper.isFile(INPUT));
-        LoggingService.logMessage(FileHelper.isDir(INPUT));
-        LoggingService.logMessage(FileHelper.isDir("src/main/resources"));
+        LoggingService.logMsg(FileHelper.isFile("src/main/resources"));
+        LoggingService.logMsg(FileHelper.isFile(INPUT));
+        LoggingService.logMsg(FileHelper.isDir(INPUT));
+        LoggingService.logMsg(FileHelper.isDir("src/main/resources"));
     }
 
 }
