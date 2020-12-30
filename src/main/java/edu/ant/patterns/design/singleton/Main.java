@@ -5,8 +5,8 @@ import edu.ant.patterns.utils.logger.LoggingService;
 public class Main {
 
     public static void main(String[] args) {
-        LoggingService.logMessage(DoubleCheckedQueen.getInstance() == DoubleCheckedQueen.getInstance());
-        LoggingService.logMessage(Queen.INSTANCE == Queen.INSTANCE);
+        LoggingService.logMsg(DoubleCheckedQueen.getInstance() == DoubleCheckedQueen.getInstance());
+        LoggingService.logMsg(Queen.INSTANCE == Queen.INSTANCE);
     }
 
 }

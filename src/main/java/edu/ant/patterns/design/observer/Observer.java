@@ -25,7 +25,7 @@ public class Observer implements Listener {
      */
     @Override
     public void notify(String name, String text) {
-        LoggingService.logMessage("Observer id " + id + " has been notified");
+        LoggingService.logMsg("Observer id " + id + " has been notified");
     }
 
 }

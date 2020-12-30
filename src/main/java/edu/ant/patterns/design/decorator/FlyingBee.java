@@ -24,7 +24,7 @@ public class FlyingBee implements Bee {
     // improves behaviour of oridnary class:
     // by adding new functionality
     public void fly() {
-        LoggingService.logMessage("I can fly!");
+        LoggingService.logMsg("I can fly!");
     }
 
 }

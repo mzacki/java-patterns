@@ -18,11 +18,11 @@ public class QueenBee implements Bee{
     // implements specific method
     @Override
     public void bzzz() {
-        LoggingService.logMessage("Queen's bzzz is different that others'");
+        LoggingService.logMsg("Queen's bzzz is different that others'");
     }
 
     public void reign() {
-        LoggingService.logMessage("I can rule the beehive!");
+        LoggingService.logMsg("I can rule the beehive!");
     }
 
 }

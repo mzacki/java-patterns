@@ -6,6 +6,6 @@ public class CommonCarder implements Bumblebee {
 
     @Override
     public void ruffle() {
-        LoggingService.logMessage("Furry fur!");
+        LoggingService.logMsg("Furry fur!");
     }
 }

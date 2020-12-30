@@ -39,7 +39,7 @@ public class ReflectionUtils {
 
     static <T> void invokeMethod(Object o, Class<T> klazz, String methodName)
             throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-      LoggingService.logMessage(klazz.getMethod(methodName).invoke(o));
+      LoggingService.logMsg(klazz.getMethod(methodName).invoke(o));
     }
 
     static <T> void invokeGetters(Object o, Class<T> klazz) {

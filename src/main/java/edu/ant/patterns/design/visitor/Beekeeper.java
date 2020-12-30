@@ -7,12 +7,12 @@ public class Beekeeper implements Visitor {
 
     @Override
     public void visit(AngrySwarm angrySwarm) {
-        LoggingService.logMessage("They are angry bees bzzzzzzzz!!!");
+        LoggingService.logMsg("They are angry bees bzzzzzzzz!!!");
     }
 
     @Override
     public void visit(CalmBeehive calmBeehive) {
-        LoggingService.logMessage("Very calm beez inside bzzzzzzzz....");
+        LoggingService.logMsg("Very calm beez inside bzzzzzzzz....");
     }
 
 }

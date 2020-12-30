@@ -7,7 +7,7 @@ public class Sensor extends AlertChain {
 
     @Override
     void perform() {
-        LoggingService.logMessage("Sensor discovers event....");
+        LoggingService.logMsg("Sensor discovers event....");
         callNextLink();
     }
 

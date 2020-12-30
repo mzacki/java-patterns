@@ -17,13 +17,13 @@ public class Analyzer implements Listener {
 
     @Override
     public void notify(String name, String msg) {
-        LoggingService.logMessage("Message received by analyzer: " + msg);
+        LoggingService.logMsg("Message received by analyzer: " + msg);
         process(msg);
     }
 
     private void process(String msg) {
-        LoggingService.logMessage("Message is being parsed and processed...");
-        LoggingService.logMessage("Analysis completed.");
+        LoggingService.logMsg("Message is being parsed and processed...");
+        LoggingService.logMsg("Analysis completed.");
     }
 
 }

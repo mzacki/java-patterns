@@ -7,13 +7,13 @@ public class Pressure implements Readable {
     // overriding default methods is allowed
     @Override
     public void check() {
-        LoggingService.logMessage("Checking pressure...");
+        LoggingService.logMsg("Checking pressure...");
     }
 
     // overriding abstract methods is a must
     @Override
     public void read() {
-        LoggingService.logMessage("Reading pressure...");
+        LoggingService.logMsg("Reading pressure...");
     }
 
 }

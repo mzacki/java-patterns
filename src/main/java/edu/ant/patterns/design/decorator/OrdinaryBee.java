@@ -6,6 +6,6 @@ public class OrdinaryBee implements Bee {
 
     @Override
     public void bzzz() {
-        LoggingService.logMessage("Bzzzz....");
+        LoggingService.logMsg("Bzzzz....");
     }
 }

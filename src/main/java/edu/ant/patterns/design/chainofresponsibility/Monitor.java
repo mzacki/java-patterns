@@ -6,7 +6,7 @@ public class Monitor extends AlertChain {
 
     @Override
     void perform() {
-        LoggingService.logMessage("Monitor receives hint from sensor.");
+        LoggingService.logMsg("Monitor receives hint from sensor.");
         callNextLink();
     }
 

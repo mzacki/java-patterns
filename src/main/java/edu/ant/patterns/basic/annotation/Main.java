@@ -24,9 +24,9 @@ public class Main {
         members.put("id", 2L);
         members.put("input", "Incoming alert: heavy rainfall");
 
-        LoggingService.logMessage("Before: " + record);
+        LoggingService.logMsg("Before: " + record);
         restore(record, members);
-        LoggingService.logMessage("After: " + record);
+        LoggingService.logMsg("After: " + record);
 
     }
 

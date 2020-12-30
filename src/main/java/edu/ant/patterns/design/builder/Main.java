@@ -12,8 +12,8 @@ public class Main {
                 .setType(Type.OSTROWSKA)
                 .build();
 
-        LoggingService.logMessage("Automatically counted no. of boxes as height: " + myFirstBeehive.getHeight());
-        LoggingService.logMessage("My first beehive: " + myFirstBeehive.toString());
+        LoggingService.logMsg("Automatically counted no. of boxes as height: " + myFirstBeehive.getHeight());
+        LoggingService.logMsg("My first beehive: " + myFirstBeehive.toString());
     }
 
 }

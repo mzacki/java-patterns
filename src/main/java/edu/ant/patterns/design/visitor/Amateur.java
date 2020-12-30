@@ -6,12 +6,12 @@ public class Amateur implements Visitor {
 
     @Override
     public void visit(AngrySwarm angrySwarm) {
-        LoggingService.logMessage("Bees are everywhere! Let's run!");
+        LoggingService.logMsg("Bees are everywhere! Let's run!");
     }
 
     @Override
     public void visit(CalmBeehive calmBeehive) {
-        LoggingService.logMessage("A lot of them inside the beehive!");
+        LoggingService.logMsg("A lot of them inside the beehive!");
     }
 
 }

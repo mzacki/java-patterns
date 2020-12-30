@@ -9,6 +9,6 @@ public class Temperature implements Readable{
     // all interface methods has to be implemented
     @Override
     public void read() {
-        LoggingService.logMessage("Reading " + TEMPERATURE);
+        LoggingService.logMsg("Reading " + TEMPERATURE);
     }
 }

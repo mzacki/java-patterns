@@ -7,7 +7,7 @@ public class Fruit implements  BranchPart{
     // you can pick (actually cut) fruit
     @Override
     public boolean cut() {
-        LoggingService.logMessage("Fruit has been picked");
+        LoggingService.logMsg("Fruit has been picked");
         return true;
     }
 

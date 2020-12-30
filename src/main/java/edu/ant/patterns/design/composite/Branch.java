@@ -15,7 +15,7 @@ public class Branch implements BranchPart {
     // If you cut the branch....
     @Override
     public boolean cut() {
-        LoggingService.logMessage("Branch has been cut");
+        LoggingService.logMsg("Branch has been cut");
         // You will cut all the leaves as well!
         parts.forEach(BranchPart::cut);
         return true;

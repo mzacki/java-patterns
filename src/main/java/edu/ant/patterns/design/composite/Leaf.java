@@ -7,7 +7,7 @@ public class Leaf implements BranchPart {
     // you can cut single leaf on a branch
     @Override
     public boolean cut() {
-        LoggingService.logMessage("Leaf has been cut");
+        LoggingService.logMsg("Leaf has been cut");
         return true;
     }
 }

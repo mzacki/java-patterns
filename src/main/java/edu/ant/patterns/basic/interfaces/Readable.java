@@ -18,7 +18,7 @@ public interface Readable {
 
     // no need to implement default methods in child classes
     default void check() {
-        LoggingService.logMessage("Checking " + getName());
+        LoggingService.logMsg("Checking " + getName());
     }
 
     // interface method is implicitly PUBLIC and ABSTRACT - such keywords are redundant

@@ -7,7 +7,7 @@ public class SuicidalStingStrategy implements StingStrategy {
 
     @Override
     public void sting() {
-        LoggingService.logMessage("Sting with full strength (but you won't survive the attack)");
+        LoggingService.logMsg("Sting with full strength (but you won't survive the attack)");
     }
 
 }

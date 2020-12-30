@@ -10,16 +10,16 @@ public class Main {
         CalmBeehive calmBeehive = new CalmBeehive();
 
         Beekeeper beekeeper = new Beekeeper();
-        LoggingService.logMessage("Beekeeper to visit angry swarm:");
+        LoggingService.logMsg("Beekeeper to visit angry swarm:");
         angrySwarm.accept(beekeeper);
-        LoggingService.logMessage("Beekeeper to visit calm beehive:");
+        LoggingService.logMsg("Beekeeper to visit calm beehive:");
         calmBeehive.accept(beekeeper);
 
-        LoggingService.logMessage("---------------------");
+        LoggingService.logMsg("---------------------");
         Amateur amateur = new Amateur();
-        LoggingService.logMessage("Amateur approached by angry swarm:");
+        LoggingService.logMsg("Amateur approached by angry swarm:");
         angrySwarm.accept(amateur);
-        LoggingService.logMessage("Amateur looking at calm bees:");
+        LoggingService.logMsg("Amateur looking at calm bees:");
         calmBeehive.accept(amateur);
 
     }

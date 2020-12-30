@@ -12,19 +12,19 @@ public class Main {
         Command levelUpdate = new UpdateCommand(forecastAlert, "Severe storm with hail");
         Command anotherLevelUpdate = new UpdateCommand(forecastAlert, "Possible tornadoes");
         
-        LoggingService.logMessage(forecastAlert.getAlertLevel());
+        LoggingService.logMsg(forecastAlert.getAlertLevel());
 
         executor.execute(levelUpdate);
-        LoggingService.logMessage(forecastAlert.getAlertLevel());
+        LoggingService.logMsg(forecastAlert.getAlertLevel());
 
         executor.execute(anotherLevelUpdate);
-        LoggingService.logMessage(forecastAlert.getAlertLevel());
+        LoggingService.logMsg(forecastAlert.getAlertLevel());
 
         executor.rollback();
-        LoggingService.logMessage(forecastAlert.getAlertLevel());
+        LoggingService.logMsg(forecastAlert.getAlertLevel());
 
         executor.rollback();
-        LoggingService.logMessage(forecastAlert.getAlertLevel());
+        LoggingService.logMsg(forecastAlert.getAlertLevel());
     }
 
 }

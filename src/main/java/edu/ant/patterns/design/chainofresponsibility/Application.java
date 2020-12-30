@@ -6,7 +6,7 @@ public class Application extends AlertChain {
 
     @Override
     void perform() {
-        LoggingService.logMessage("Application receives alert from monitor");
+        LoggingService.logMsg("Application receives alert from monitor");
     }
 
 }

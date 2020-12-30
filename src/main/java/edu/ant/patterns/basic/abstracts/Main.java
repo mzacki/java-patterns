@@ -22,8 +22,8 @@ public class Main {
         // finally, subclass must implement inherited abstract method
         insect.contact();
 
-        LoggingService.logMessage(insect.getName());
-        LoggingService.logMessage(hymenoptera.getName());
+        LoggingService.logMsg(insect.getName());
+        LoggingService.logMsg(hymenoptera.getName());
     }
 
 }

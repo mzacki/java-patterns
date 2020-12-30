@@ -12,7 +12,7 @@ public class Main {
         stingerBee.sting();
 
         // custom implementation of sting strategy: as it's functional interface with SAM, we can use lambda
-        stingerBee.setStingStrategy(() -> LoggingService.logMessage("Custom sting strategy: just scratch two times."));
+        stingerBee.setStingStrategy(() -> LoggingService.logMsg("Custom sting strategy: just scratch two times."));
         stingerBee.sting();
     }
 

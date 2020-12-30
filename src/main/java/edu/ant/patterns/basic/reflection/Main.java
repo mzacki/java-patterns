@@ -24,8 +24,8 @@ public class Main {
         // INVOKE DECLARED METHODS
         ReflectionUtils.invokeGetters(record, Record.class);
         // INVOKE CONSTUCTOR
-        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 2, 1L, "input"));
-        LoggingService.logMessage(ReflectionUtils.getInstance(Record.class, 1, 1L));
+        LoggingService.logMsg(ReflectionUtils.getInstance(Record.class, 2, 1L, "input"));
+        LoggingService.logMsg(ReflectionUtils.getInstance(Record.class, 1, 1L));
         // CONSTRUCT STEP
         constructStep();
         // FIELD STEP
@@ -34,41 +34,41 @@ public class Main {
         methodStep();
         // GET CONSTRUCTOR
         try {
-            LoggingService.logMessage(ReflectionUtils.getConstructor(Record.class));
-            LoggingService.logMessage(ReflectionUtils.getConstructor(Tuple.class));
+            LoggingService.logMsg(ReflectionUtils.getConstructor(Record.class));
+            LoggingService.logMsg(ReflectionUtils.getConstructor(Tuple.class));
         } catch (NoSuchConstructorException e) {
             LoggingService.logError(e);
         }
         // GET REFERENCE TYPE OR CONSTRUCTOR FOR REF TYPE
-        LoggingService.logMessage(ReflectionUtils.getWrapper(long.class));
-        LoggingService.logMessage(ReflectionUtils.getConstructor(long.class));
+        LoggingService.logMsg(ReflectionUtils.getWrapper(long.class));
+        LoggingService.logMsg(ReflectionUtils.getConstructor(long.class));
         // GET PARAM VALUE IF PARAM ANNOTATION IS PRESENT
-        LoggingService.logMessage(ReflectionUtils.getParam(Record.class.getConstructors()[0].getParameters()[1]));
+        LoggingService.logMsg(ReflectionUtils.getParam(Record.class.getConstructors()[0].getParameters()[1]));
     }
 
     private static void constructStep() throws NoSuchConstructorException {
         ConstructorStep<Record> constructorStep = new ConstructorStep<>(Record.class,
                 new Class[]{long.class, String.class},
                 new Object[]{99L, "record constructed by step"});
-        LoggingService.logMessage(constructorStep.make());
+        LoggingService.logMsg(constructorStep.make());
     }
 
     private static void fieldStep() throws NoSuchFieldException {
         Record record = new Record(0L, "initial input");
-        LoggingService.logMessage(record);
+        LoggingService.logMsg(record);
         FieldStep<Record> fieldStep = new FieldStep<>(Record.class, "input", "input update");
         fieldStep.make(record);
-        LoggingService.logMessage(record);
+        LoggingService.logMsg(record);
     }
 
     private static void methodStep() throws NoSuchMethodException {
         Record record = new Record(0L, "initial input");
-        LoggingService.logMessage(record);
+        LoggingService.logMsg(record);
         MethodStep<Record> methodStep = new MethodStep<>(Record.class, "setInput", new Class[]{String.class},
                 new Object[]{"input injected by method step"});
         methodStep.make(record);
-        LoggingService.logMessage(record);
-        LoggingService.logMessage(methodStep.getType());
+        LoggingService.logMsg(record);
+        LoggingService.logMsg(methodStep.getType());
     }
 
 }
