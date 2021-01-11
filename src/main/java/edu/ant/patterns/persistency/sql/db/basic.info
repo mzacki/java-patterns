@@ -1,0 +1,23 @@
+Source: freecodecamp.org
+
+1.
+Normalized (Optimizes for minimizing redundancy, not for read time)
+-- such db contains many tables like id + sth, uses joins etc.
+vs
+Denormalized Databases (Optimizes for read time, not for minimizing redundancy)
+-- such db contains as many columns in one table as possible (not need to create more tables...),
+not clear solution but faster
+
+2.
+-- Data integrity --
+Entity Integrity: No duplicate rows exist in a table.
+Domain Integrity: Restricting the type of values that one can insert in order to enforce correct values.
+For example, using enums.
+Referential Integrity: Records that are used by other records cannot be deleted (using constraints)
+
+3.
+-- Key terms ---
+RDMS: Relational Database Management Systems.
+This framework for databases is the basis of MySQL.
+SQL: Structured Query Language.
+JDBC: abstraction layer that connects db to Java code
