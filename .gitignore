@@ -1,3 +1,5 @@
+# Created by https://www.gitignore.io/
+
 .classpath
 .project
 logs/
@@ -7,6 +9,9 @@ logs/
 .idea/
 
 **/topsecret/
+
+# sql dump file
+*.dump
 
 # Compiled class file
 *.classf
