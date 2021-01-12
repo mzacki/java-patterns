@@ -1,15 +1,20 @@
 -- create table in the db currently in use, set columns and their type
 CREATE TABLE company (
-    company_id INT NOT NULL,
+    company_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR (255) NOT NULL,
     established_date DATE,
-    hq_country VARCHAR (4)
+    hq_country VARCHAR (4),
+    PRIMARY KEY (company_id)
 );
 
+ALTER TABLE company
+    add constraint company_pk
+        primary key (company_id);
+
 -- insert rows
-INSERT INTO company (company_id, name, established_date, hq_country)
-VALUES (1, 'Sunrise Ltd', '1987-06-26', 'JPN'),
-(2, 'SEOUL_88', '1988-09-17', 'KOR');
+INSERT INTO company (name, established_date, hq_country)
+VALUES ('Sunrise Ltd', '1987-06-26', 'JPN'),
+('SEOUL_88', '1988-09-17', 'KOR');
 
 -- select (view) particular columns
 SELECT name, country FROM company;
