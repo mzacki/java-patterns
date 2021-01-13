@@ -7,9 +7,11 @@ CREATE TABLE company (
     PRIMARY KEY (company_id)
 );
 
+-- add column with ALTER TABLE
 ALTER TABLE company
-    add constraint company_pk
-        primary key (company_id);
+    ADD customer_id INT;
+
+
 
 -- insert rows
 INSERT INTO company (name, established_date, hq_country)
@@ -26,7 +28,7 @@ SELECT * FROM company;
 SELECT * FROM company
 WHERE hq_country='JPN';
 
--- comparing date must be within ticks, not single quotes, otherwise it's string and does not work!
+-- in some sql dialects field name containing date must be within ticks, not single quotes, otherwise it's string and does not work!
 SELECT * FROM company
 WHERE hq_country='JPN' AND `established_date` < '1987-06-26';
 

@@ -1,0 +1,14 @@
+1. Normalized database (Optimizes for minimizing redundancy, not for read time)
+-- such db contains many tables like id + sth, uses joins etc.
+2. Denormalized Databases (Optimizes for read time, not for minimizing redundancy)
+-- such db contains as many columns in one table as possible (not need to create more tables...),
+--- not clear solution but faster
+3. Entity Integrity: No duplicate rows exist in a table.
+4. Domain Integrity: Restricting the type of values that one can insert in order to enforce correct values.
+--- For example, using enums.
+5. Referential Integrity: Records that are used by other records cannot be deleted (using constraints)
+6. RDMS: Relational Database Management Systems.
+7. SQL: Structured Query Language.
+8. JDBC: abstraction layer that connects db to Java code
+9. Primary key - unique field or combination of fields, only one row with the same PK may exist in a table
+10. Foreign key - indicates PK of a row in the table which a table containing FK is related to

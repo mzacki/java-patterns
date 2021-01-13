@@ -48,3 +48,12 @@ FROM
     company
 WHERE
     company_id IN (3, 4);
+
+-- INSERT duplicated records with name suffix
+INSERT INTO company(name, established_date, hq_country)
+SELECT
+    CONCAT(name, '_COPY'),
+    established_date,
+    hq_country
+FROM
+    company
