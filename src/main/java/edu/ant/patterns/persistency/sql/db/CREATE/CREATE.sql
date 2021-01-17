@@ -4,19 +4,32 @@ CREATE TABLE company (
     name VARCHAR (255) NOT NULL,
     established_date DATE,
     hq_country VARCHAR (4),
-    PRIMARY KEY (company_id)
+    PRIMARY KEY (company_id),
+    -- constraint on column
+    -- CHECK (established_date >= '2000-01-01')
+    -- constraint on multiple columns
+    -- CONSTRAINT CHK_Company CHECK (established_date >= '2000-01-01' AND hq_country NOT LIKE 'Z%')
 );
 
 -- add column with ALTER TABLE
 ALTER TABLE company
     ADD customer_id INT;
 
-
-
 -- insert rows
 INSERT INTO company (name, established_date, hq_country)
 VALUES ('Sunrise Ltd', '1987-06-26', 'JPN'),
 ('SEOUL_88', '1988-09-17', 'KOR');
+
+-- update record
+UPDATE company SET name = 'Seoul 88'
+WHERE name = 'SEOUL_88';
+
+-- update record copying column from joint table
+-- not supported by current dialect
+UPDATE company
+SET company.name = customer.first_name
+FROM company
+JOIN customer ON company.customer_id = customer.customer_id
 
 -- select (view) particular columns
 SELECT name, country FROM company;
