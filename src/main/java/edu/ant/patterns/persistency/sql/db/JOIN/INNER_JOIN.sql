@@ -33,4 +33,24 @@ SELECT * FROM
 INNER JOIN
     customer c ON company.customer_id = c.customer_id
 
--- CROSS JOIN - alternative for INNER JOIN
+-- CROSS JOIN joins all rows from one table with all rows of second table
+-- on given condition
+-- without condition it makes Cartesian product
+SELECT * FROM
+    customer
+        CROSS JOIN
+    company
+WHERE
+        customer.customer_id = company.customer_id
+
+-- USING
+SELECT * FROM
+    company
+        INNER JOIN
+    customer USING(customer_id);
+
+SELECT last_name, name
+    FROM
+    company
+        INNER JOIN
+    customer USING(customer_id);
