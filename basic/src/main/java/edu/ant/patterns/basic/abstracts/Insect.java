@@ -1,7 +1,7 @@
 package edu.ant.patterns.basic.abstracts;
 
 /**
- * Abstract class cannot be instanciated
+ * Abstract class cannot be instantiated
  * Objects cannot be initialized
  * */
 public abstract class Insect {

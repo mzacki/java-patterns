@@ -12,3 +12,6 @@
 8. JDBC: abstraction layer that connects db to Java code
 9. Primary key - unique field or combination of fields, only one row with the same PK may exist in a table
 10. Foreign key - indicates PK of a row in the table which a table containing FK is related to
+11. Deterministic function (vs idempotent):
+https://stackoverflow.com/questions/40296211/what-is-the-difference-between-an-idempotent-and-a-deterministic-function
+https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i

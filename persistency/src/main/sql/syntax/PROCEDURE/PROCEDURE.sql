@@ -1,4 +1,4 @@
--- STORED PROCEDURE AKA ROUTINE - SQL query saved directly in db as a function
+-- STORED PROCEDURE - SQL query saved directly in db as a function
 -- such function accepts argument being used to execute query within stored procedure
 -- procedure can be then called multiple times with different args
 
