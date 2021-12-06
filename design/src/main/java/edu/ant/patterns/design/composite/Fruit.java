@@ -2,7 +2,7 @@ package edu.ant.patterns.design.composite;
 
 import edu.ant.patterns.utils.logger.LoggingService;
 
-public class Fruit implements  BranchPart{
+public class Fruit implements  BranchPart {
 
     // you can pick (actually cut) fruit
     @Override
