@@ -15,5 +15,14 @@
 11. Deterministic function (vs idempotent):
 https://stackoverflow.com/questions/40296211/what-is-the-difference-between-an-idempotent-and-a-deterministic-function
 https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i
+
 12. Index
 https://stackoverflow.com/questions/1108/how-does-database-indexing-work
+--- What is index ?
+-- Separate bunch of data, created from indexed field (column) and pointer to full record containing such field.
+--- Why is it faster and useful ?
+-- It's smaller than full record, contains less disk space, it's sorted allowing binary search, so it's faster to iterate through:
+-- From stackoverflow.com:
+index record contains only the indexed field and a pointer to the original record,
+it stands to reason that it will be smaller than the multi-field record that it points to.
+So the index itself requires fewer disk blocks than the original table, which therefore requires fewer block accesses to iterate through.
