@@ -15,3 +15,5 @@
 11. Deterministic function (vs idempotent):
 https://stackoverflow.com/questions/40296211/what-is-the-difference-between-an-idempotent-and-a-deterministic-function
 https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i
+12. Index
+https://stackoverflow.com/questions/1108/how-does-database-indexing-work
