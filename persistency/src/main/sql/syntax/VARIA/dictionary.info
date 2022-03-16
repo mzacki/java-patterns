@@ -26,3 +26,5 @@ https://stackoverflow.com/questions/1108/how-does-database-indexing-work
 index record contains only the indexed field and a pointer to the original record,
 it stands to reason that it will be smaller than the multi-field record that it points to.
 So the index itself requires fewer disk blocks than the original table, which therefore requires fewer block accesses to iterate through.
+
+13. Logical database model - objects (entities) and tables - logical view of DB
