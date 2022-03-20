@@ -28,3 +28,4 @@ it stands to reason that it will be smaller than the multi-field record that it 
 So the index itself requires fewer disk blocks than the original table, which therefore requires fewer block accesses to iterate through.
 
 13. Logical database model - objects (entities) and tables - logical view of DB
+14. Physical database model - objects, tables, fields (meaning: columns within a table including their propreties, like type etc.)
