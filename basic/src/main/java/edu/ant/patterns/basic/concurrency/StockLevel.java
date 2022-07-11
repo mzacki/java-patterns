@@ -9,17 +9,25 @@ public class StockLevel {
     }
 
     public boolean poll(int quantity) {
-        // 3) THREAD #2 enters the method...
+        // STEP 2:
+        // THREAD #2 concurrently enters the method...
         if (currentInventory >= quantity) {
-            // 4) THREAD #2 evaluates condition to true as THREAD #1 did not manage to update the inventory
+            // STEP 3:
+            // THREAD #2 evaluates condition to true as THREAD #1 has not managed to update the inventory yet
 
-            //  1) BOTTLENECK:
+            // STEP 0:
+            // BOTTLENECK!
             // if store engine or database lags (heavy workload, multiple users, fetching upstream data, sourcing downstream data)
             // inventory update may be delayed
 
-            //  2) THREAD #1 lags to update current inventory
+            //  STEP 1:
+            //  THREAD #1 delays the update of current inventory
             currentInventory = currentInventory - quantity;
 
+            Warehouse.fetchItem();
+            // STEP 4:
+            // OVERSTOCKING!!!
+            // both threads fetch product from warehouse
             return true;
         }
         return false;
