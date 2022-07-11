@@ -2,6 +2,7 @@ package edu.ant.patterns.basic.concurrency;
 
 public class StockLevel {
 
+    // suppose it's empty or has low stock level
     private int currentInventory;
 
     public StockLevel(int initInventory) {
@@ -26,8 +27,9 @@ public class StockLevel {
 
             Warehouse.fetchItem();
             // STEP 4:
-            // OVERSTOCKING!!!
+            // RISK OF UNDERSTOCKING!!!
             // both threads fetch product from warehouse
+            // THREAD #2 does not know the true level of inventory
             return true;
         }
         return false;
