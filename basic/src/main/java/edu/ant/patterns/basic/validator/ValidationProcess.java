@@ -2,6 +2,11 @@ package edu.ant.patterns.basic.validator;
 
 import java.util.List;
 
+
+/**
+ * Actually it is Delegate Pattern.
+ * */
+
 public class ValidationProcess implements IValidator {
 
     List<IValidator> validators;
