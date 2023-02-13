@@ -42,7 +42,7 @@ public class Circle implements Comparable<Circle> {
                     ", r: " + radius;
     }
 
-    // Object class method equals() to ovveride
+    // Object class method equals() to override
     @Override
     public boolean equals(Object o) {
         // same references == same object
